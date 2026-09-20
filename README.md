@@ -124,7 +124,7 @@ sudo -u postgres psql -d jerney_db  # Connect to database
 | GET | `/api/comments/post/:postId` | Get comments for a post |
 | POST | `/api/comments` | Create a comment |
 | DELETE | `/api/comments/:id` | Delete a comment |
-
+---
 
 🔐 Security-Focused CI/CD Pipeline
 

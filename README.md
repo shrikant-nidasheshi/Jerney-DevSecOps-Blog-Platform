@@ -8,13 +8,7 @@ A Gen-Z vibe blog platform built with a 3-tier architecture — React frontend, 
 
 ---
 
-> [!IMPORTANT]
-> **Looking for the full DevSecOps implementation?**
-> Switch to the [`devops`](../../tree/devops) branch for Docker, Kubernetes (EKS Auto Mode), Terraform, CI/CD with GitHub Actions, container security scanning, and more.
->
-> ```bash
-> git checkout devops
-> ```
+
 
 ---
 
@@ -114,41 +108,6 @@ sudo systemctl restart nginx        # Restart Nginx
 sudo -u postgres psql -d jerney_db  # Connect to database
 ```
 
----
-
-## 🧑‍💻 Local Development (Without Docker)
-
-### Prerequisites
-
-- Node.js 20+
-- PostgreSQL 16+
-
-### Backend
-
-```bash
-cd backend
-npm install
-
-# Create a .env file (or export these variables)
-export DB_HOST=localhost
-export DB_PORT=5432
-export DB_USER=jerney_user
-export DB_PASSWORD=jerney_pass_2026
-export DB_NAME=jerney_db
-export PORT=5000
-
-npm start
-```
-
-### Frontend
-
-```bash
-cd frontend
-npm install
-npm run dev
-```
-
-The Vite dev server starts on `http://localhost:3000` and proxies `/api` requests to the backend at `http://localhost:5000`.
 
 ---
 
@@ -166,15 +125,4 @@ The Vite dev server starts on `http://localhost:3000` and proxies `/api` request
 | POST | `/api/comments` | Create a comment |
 | DELETE | `/api/comments/:id` | Delete a comment |
 
-
----
-
-## 🌿 Branch Strategy
-
-| Branch | Purpose |
-|--------|---------|
-| `main` | Source code + EC2 bare-metal deployment |
-| `devops` | Full DevSecOps — Docker, Kubernetes (EKS), Terraform, CI/CD pipeline, security scanning |
-
----
 

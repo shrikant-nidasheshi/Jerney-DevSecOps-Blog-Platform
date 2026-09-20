@@ -126,7 +126,7 @@ sudo -u postgres psql -d jerney_db  # Connect to database
 | DELETE | `/api/comments/:id` | Delete a comment |
 
 
-
+🔐 Security-Focused CI/CD Pipeline
 
 
 ```mermaid

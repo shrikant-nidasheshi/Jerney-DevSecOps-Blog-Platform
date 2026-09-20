@@ -126,24 +126,7 @@ sudo -u postgres psql -d jerney_db  # Connect to database
 | DELETE | `/api/comments/:id` | Delete a comment |
 
 
-<div align="center">
 
-```mermaid
-flowchart TD
-    A[Developer Push / Pull Request] --> B[ESLint<br/>Code Linting]
-    B --> C[npm audit<br/>SCA]
-    C --> D[Hadolint<br/>Dockerfile Scan]
-    D --> E[Checkov<br/>Terraform + K8s IaC Scan]
-    E --> F[Build Container Image]
-    F --> G[Trivy<br/>Image & Config Vulnerability Scan]
-    G --> H[Push Image to GHCR]
-    H --> I[Deploy to AWS EKS]
-
-    style A fill:#2563eb,color:#fff
-    style I fill:#16a34a,color:#fff
-```
-
-</div>
 
 
 ```mermaid
